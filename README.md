@@ -188,7 +188,7 @@ Registro de ventas
 **Fecha**: 13/09/2022
 **Prioridad**: Media
 
-###Narrativa
+### Narrativa
 
 Como *Empleado* quiero realizar el pedido de productos que no esten en stock en la tienda y se encuentre disponible en el almacen.
 
@@ -197,12 +197,12 @@ Como *Empleado* quiero realizar el pedido de productos que no esten en stock en 
 
 --
 
-###[013 - Lista de productos]
+### [013 - Lista de productos]
 
 **Fecha**: 13/09/2022
 **Prioridad**: Media
 
-###Narrativa
+### Narrativa
 
 Como *Cliente* quiero realizar una lista de los productos que deseo realizar su pedido. 
 
@@ -214,12 +214,12 @@ Registro de Cliente
 
 --
 
-###[013 - Gestion de pedidos]
+### [013 - Gestion de pedidos]
 
 **Fecha**: 13/09/2022
 **Prioridad**: Media
 
-###Narrativa
+### Narrativa
 
 Como *Empleado* quiero ver la lista de productos de cada pedido y asi preparar dichos productos para su envio 
 
