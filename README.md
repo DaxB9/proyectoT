@@ -195,7 +195,7 @@ Como *Empleado* quiero realizar el pedido de productos que no esten en stock en 
 ###  Dependencias
  Administracion de Inventario
 
---
+---
 
 ### [013 - Lista de productos]
 
@@ -212,7 +212,7 @@ Como *Cliente* quiero realizar una lista de los productos que deseo realizar su 
 Administracion de Inventario
 Registro de Cliente
 
---
+---
 
 ### [013 - Gestion de pedidos]
 
