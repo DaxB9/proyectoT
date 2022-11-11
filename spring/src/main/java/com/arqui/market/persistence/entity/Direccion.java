@@ -18,9 +18,9 @@ public class Direccion {
     @Column(name = "id_usuario")
     private String idUsuario;
 
-    @ManyToOne
-    @JoinColumn(name = "usuario_id",insertable = false,updatable = false)
-    private Usuario usuario;
+//    @ManyToOne
+//    @JoinColumn(name = "usuario_id",insertable = false,updatable = false)
+//    private Usuario usuario;
 
     @OneToOne(mappedBy = "direccion")
     private Compra compra;

@@ -21,9 +21,9 @@ public class Compra {
     @Column(name = "direccion_id")
     private Integer idDireccion;
 
-    @ManyToOne
-    @JoinColumn(name = "usuario_id",insertable = false,updatable = false)
-    private Usuario usuario;
+//    @ManyToOne
+//    @JoinColumn(name = "usuario_id",insertable = false,updatable = false)
+//    private Usuario usuario;
 
     @OneToMany(mappedBy = "producto")
     private List<CompraProducto> productos;
