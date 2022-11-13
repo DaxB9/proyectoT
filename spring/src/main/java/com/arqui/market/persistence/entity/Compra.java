@@ -21,11 +21,11 @@ public class Compra {
     @Column(name = "direccion_id")
     private Integer idDireccion;
 
-//    @ManyToOne
-//    @JoinColumn(name = "usuario_id",insertable = false,updatable = false)
-//    private Usuario usuario;
+    @ManyToOne
+    @JoinColumn(name = "usuario_id",insertable = false,updatable = false)
+    private Usuario usuario;
 
-    @OneToMany(mappedBy = "producto")
+    @OneToMany(mappedBy = "compra", cascade = {CascadeType.ALL})
     private List<CompraProducto> productos;
 
     @OneToOne
@@ -86,5 +86,29 @@ public class Compra {
 
     public void setIdDireccion(Integer idDireccion) {
         this.idDireccion = idDireccion;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public List<CompraProducto> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(List<CompraProducto> productos) {
+        this.productos = productos;
+    }
+
+    public Direccion getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(Direccion direccion) {
+        this.direccion = direccion;
     }
 }
