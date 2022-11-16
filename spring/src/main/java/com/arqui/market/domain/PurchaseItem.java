@@ -6,7 +6,7 @@ public class PurchaseItem {
     private int productId;
     private int quantity;
     private BigDecimal total;
-    private boolean active;
+    private Integer active;
 
     public int getProductId() {
         return productId;
@@ -32,11 +32,11 @@ public class PurchaseItem {
         this.total = total;
     }
 
-    public boolean isActive() {
+    public Integer getActive() {
         return active;
     }
 
-    public void setActive(boolean active) {
+    public void setActive(Integer active) {
         this.active = active;
     }
 }

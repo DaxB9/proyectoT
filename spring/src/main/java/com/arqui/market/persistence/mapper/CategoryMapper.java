@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
+
 @Mapper(componentModel = "spring")
 public interface CategoryMapper {
     @Mappings({

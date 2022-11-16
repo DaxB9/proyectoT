@@ -5,14 +5,14 @@ import com.arqui.market.persistence.entity.CompraProducto;
 import org.mapstruct.*;
 import org.springframework.stereotype.Repository;
 
-@Repository
+
 @Mapper(componentModel = "spring", uses = {ProductMapper.class})
 public interface PurchaseItemMapper {
     @Mappings({
             @Mapping(source = "id.idProducto",target = "productId"),
             @Mapping(source = "cantidad", target = "quantity"),
             //@Mapping(source = "total", target = "total"), No es necesario ya que tienen el mismo nombre
-            @Mapping(source = "estado", target =  "active")
+            @Mapping(source = "estado", target =  "active"),
     })
     PurchaseItem toPurchaseItem(CompraProducto producto);
 

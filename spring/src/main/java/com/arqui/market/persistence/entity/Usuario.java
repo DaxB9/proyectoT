@@ -1,9 +1,6 @@
 package com.arqui.market.persistence.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -25,8 +22,22 @@ public class Usuario {
     @OneToMany(mappedBy = "usuario")
     private List<Direccion> direccions;
 
-    @OneToMany(mappedBy = "rol")
-    private List<UsuarioRol> rol;
+
+    //@ManyToMany
+    //@JoinTable(
+    //  name = "course_like",
+    //  joinColumns = @JoinColumn(name = "student_id"),
+    //  inverseJoinColumns = @JoinColumn(name = "course_id"))
+//    @OneToMany(mappedBy = "usuario")
+//    private List<UsuarioRol> rol;
+
+    @ManyToMany
+    @JoinTable(
+            name = "usuario_rol",
+            joinColumns = @JoinColumn(name = "usuario_id"),
+            inverseJoinColumns = @JoinColumn(name = "rol_id")
+    )
+    private List<Rol> rol;
 
     public String getId() {
         return id;
@@ -90,5 +101,29 @@ public class Usuario {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public List<Compra> getCompras() {
+        return compras;
+    }
+
+    public void setCompras(List<Compra> compras) {
+        this.compras = compras;
+    }
+
+    public List<Direccion> getDireccions() {
+        return direccions;
+    }
+
+    public void setDireccions(List<Direccion> direccions) {
+        this.direccions = direccions;
+    }
+
+    public List<Rol> getRol() {
+        return rol;
+    }
+
+    public void setRol(List<Rol> rol) {
+        this.rol = rol;
     }
 }

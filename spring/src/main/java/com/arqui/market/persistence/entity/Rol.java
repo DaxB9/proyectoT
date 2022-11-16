@@ -16,6 +16,8 @@ public class Rol {
         return idRol;
     }
 
+
+
     @OneToMany(mappedBy = "usuario")
     private List<UsuarioRol> usuario;
     public void setIdRol(Integer idRol) {
@@ -28,5 +30,13 @@ public class Rol {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public List<UsuarioRol> getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(List<UsuarioRol> usuario) {
+        this.usuario = usuario;
     }
 }

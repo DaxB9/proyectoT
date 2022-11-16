@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
+
 @Mapper(componentModel = "spring", uses = {PurchaseItemMapper.class})
 public interface PurchaseMapper {
 
@@ -22,7 +22,7 @@ public interface PurchaseMapper {
             @Mapping(source = "medioPago", target = "paymentMethod"),
             @Mapping(source = "comentario", target = "comment"),
             @Mapping(source = "estado", target = "active"),
-            @Mapping(source = "idDireccion", target = "direccionId"),
+            @Mapping(source = "idDireccion", target = "directionId"),
             @Mapping(source = "productos", target = "items")
     })
     Purchase toPurchase(Compra compra);
