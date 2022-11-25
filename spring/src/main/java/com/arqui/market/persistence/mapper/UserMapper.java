@@ -20,8 +20,8 @@ public interface UserMapper {
             @Mapping(source = "correo",target = "email"),
             @Mapping(source = "estado",target = "active"),
             @Mapping(source = "usuario",target = "username"),
-            @Mapping(source = "password",target = "password"),
-            @Mapping(source = "rol",target = "roles"),
+//            @Mapping(source = "password",target = "password"),
+//            @Mapping(source = "rol",target = "roles"),
     })
     User toUser(Usuario usuario);
 
@@ -31,6 +31,7 @@ public interface UserMapper {
     @Mappings({
             @Mapping(target = "compras",ignore = true),
             @Mapping(target = "direccions",ignore = true),
+//            @Mapping(target = "rol",ignore = true),
     })
     Usuario toUsuario(User user);
 }

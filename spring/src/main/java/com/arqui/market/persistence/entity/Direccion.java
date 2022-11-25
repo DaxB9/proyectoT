@@ -15,7 +15,7 @@ public class Direccion {
     private BigDecimal latitud;
     private BigDecimal longitud;
     private Integer estado;
-    @Column(name = "id_usuario")
+    @Column(name = "usuario_id")
     private String idUsuario;
 
     @ManyToOne
@@ -79,5 +79,21 @@ public class Direccion {
 
     public void setIdUsuario(String idUsuario) {
         this.idUsuario = idUsuario;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public Compra getCompra() {
+        return compra;
+    }
+
+    public void setCompra(Compra compra) {
+        this.compra = compra;
     }
 }

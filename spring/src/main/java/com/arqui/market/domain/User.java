@@ -3,25 +3,6 @@ package com.arqui.market.domain;
 import java.util.List;
 
 public class User {
-    //@Id
-    //    private String id;
-    //    private String nombre;
-    //    private String apellido;
-    //    private Integer celular;
-    //    private String correo;
-    //    private Integer estado;
-    //    private String usuario;
-    //    private String password;
-    //
-    //    @OneToMany(mappedBy = "usuario")
-    //    private List<Compra> compras;
-    //
-    //    @OneToMany(mappedBy = "usuario")
-    //    private List<Direccion> direccions;
-    //
-    //    @OneToMany(mappedBy = "rol")
-    //    private List<UsuarioRol> rol;
-
     private String id;
     private String name;
     private String lastname;
@@ -30,7 +11,7 @@ public class User {
     private Integer active;
     private String username;
     private String password;
-    private List<Role> roles;
+//    private List<Role> roles;
 
     public String getId() {
         return id;
@@ -96,11 +77,11 @@ public class User {
         this.password = password;
     }
 
-    public List<Role> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(List<Role> roles) {
-        this.roles = roles;
-    }
+//    public List<Role> getRoles() {
+//        return roles;
+//    }
+//
+//    public void setRoles(List<Role> roles) {
+//        this.roles = roles;
+//    }
 }
